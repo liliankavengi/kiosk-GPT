@@ -254,7 +254,7 @@ LOG_LEVEL=INFO
 
 ## 7. Phased Build Plan
 
-### Phase 1: Project Scaffolding & Core Setup ⏱️ Day 1
+### Phase 1: Project Scaffolding & Core Setup  Day 1
 - [x] Initialize Git repo
 - [ ] Create directory structure
 - [ ] Set up `pyproject.toml` + `requirements.txt`
@@ -265,7 +265,7 @@ LOG_LEVEL=INFO
 - [ ] Create `.env.example` and `.gitignore`
 - [ ] Verify server starts with `uvicorn`
 
-### Phase 2: WhatsApp Integration ⏱️ Days 2-3
+### Phase 2: WhatsApp Integration  Days 2-3
 - [ ] Implement webhook verification (`GET /webhook`)
 - [ ] Implement message handler (`POST /webhook`)
 - [ ] Parse incoming message types (text, interactive, flow_reply)
@@ -275,7 +275,7 @@ LOG_LEVEL=INFO
 - [ ] Wire registration flow → create `duka` in Supabase
 - [ ] Test with WhatsApp test number
 
-### Phase 3: AI Parser (Sheng/Swahili → JSON) ⏱️ Day 4
+### Phase 3: AI Parser (Sheng/Swahili → JSON)  Day 4
 - [ ] Design one-shot prompt template (`prompts/sale_parser.txt`)
 - [ ] Implement `services/ai_parser.py`
 - [ ] Handle edge cases: mixed languages, typos, slang
@@ -283,7 +283,7 @@ LOG_LEVEL=INFO
 - [ ] Write unit tests with sample Sheng phrases
 - [ ] Integrate parser into webhook message flow
 
-### Phase 4: Inventory Management ⏱️ Day 5
+### Phase 4: Inventory Management  Day 5
 - [ ] Implement `services/inventory.py` (CRUD operations)
 - [ ] Auto-deduct stock on sale recorded
 - [ ] Low-stock alert logic (check against `reorder_threshold`)
@@ -291,7 +291,7 @@ LOG_LEVEL=INFO
 - [ ] Record sales in `sales` table with parsed items
 - [ ] Test full flow: message → AI parse → stock update → alert
 
-### Phase 5: Lightning Payments (LDK Node) ⏱️ Days 6-7
+### Phase 5: Lightning Payments (LDK Node)  Days 6-7
 - [ ] Install `ldk-node` Python bindings
 - [ ] Implement `services/lightning.py` (node initialization, Bolt12)
 - [ ] Create payment flow: fetch offer → pay → confirm
@@ -300,7 +300,7 @@ LOG_LEVEL=INFO
 - [ ] Record payment in `payments` table
 - [ ] Test on Lightning testnet
 
-### Phase 6: Dashboard & Polish ⏱️ Day 8
+### Phase 6: Dashboard & Polish  Day 8
 - [ ] Build minimal `dashboard/` (HTML + JS + Supabase Realtime)
 - [ ] Show live inventory, recent sales, payment history
 - [ ] Add structured logging throughout
@@ -341,7 +341,7 @@ Incoming → Parse message type →
   "version": "3.0",
   "screen": "SUCCESS",
   "data": {
-    "message": "✅ Duka registered! Send sales in Sheng or Swahili."
+    "message": " Duka registered! Send sales in Sheng or Swahili."
   }
 }
 ```
@@ -495,6 +495,3 @@ ldk-node>=0.4           # LDK Node Python bindings (verify latest)
 - [ ] Test full flow end-to-end on a real WhatsApp number
 
 ---
-
-> [!IMPORTANT]
-> **Next Step:** Approve this plan, then I'll begin executing **Phase 1** — scaffolding the project, creating all files, and getting the FastAPI server running.

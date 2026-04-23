@@ -22,7 +22,9 @@ Rules:
    -"kilo moja" =1kg
    -"kilo mbili" =2kg
    -"kilo tatu" =3kg
-      
+   -"rwabe" = 200
+   
+
 5. Action keywords:
    - "Nimeuza" / "nime sell" / "sold" = sold
    - "Nimepokea" / "nimereceive" / "restocked" / "nimepata" = restocked
