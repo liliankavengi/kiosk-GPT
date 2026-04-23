@@ -1,0 +1,10 @@
+[project]
+name = "kiosk-gpt"
+version = "0.1.0"
+description = "WhatsApp-native kiosk management for Kenyan shopkeepers — AI + Lightning"
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

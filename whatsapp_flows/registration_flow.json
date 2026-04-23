@@ -1,0 +1,95 @@
+{
+  "version": "7.2",
+  "screens": [
+    {
+      "id": "REGISTRATION",
+      "title": "Register Your Duka",
+      "data": {},
+      "layout": {
+        "type": "SingleColumnLayout",
+        "children": [
+          {
+            "type": "TextHeading",
+            "text": "Welcome to Kiosk-GPT"
+          },
+          {
+            "type": "TextBody",
+            "text": "Register your duka to start tracking sales and inventory via WhatsApp."
+          },
+          {
+            "type": "TextInput",
+            "name": "duka_name",
+            "label": "Duka Name",
+            "required": true,
+            "input-type": "text",
+            "helper-text": "e.g., Kavengi's Kiosk"
+          },
+          {
+            "type": "Dropdown",
+            "name": "inventory_type",
+            "label": "Inventory Type",
+            "required": true,
+            "data-source": [
+              {
+                "id": "grocery",
+                "title": "Grocery"
+              },
+              {
+                "id": "electronics",
+                "title": "Electronics"
+              },
+              {
+                "id": "general",
+                "title": "General"
+              }
+            ]
+          },
+          {
+            "type": "TextInput",
+            "name": "lightning_address",
+            "label": "Lightning Address (Optional)",
+            "required": false,
+            "input-type": "text",
+            "helper-text": "e.g., yourname@getalby.com — for receiving customer payments"
+          },
+          {
+            "type": "Footer",
+            "label": "Register My Duka",
+            "on-click-action": {
+              "name": "data_exchange",
+              "payload": {
+                "duka_name": "${form.duka_name}",
+                "inventory_type": "${form.inventory_type}",
+                "lightning_address": "${form.lightning_address}"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "SUCCESS",
+      "title": "You're All Set!",
+      "terminal": true,
+      "data": {
+        "message": {
+          "type": "string",
+          "__example__": "Registration successful!"
+        }
+      },
+      "layout": {
+        "type": "SingleColumnLayout",
+        "children": [
+          {
+            "type": "TextHeading",
+            "text": "Registration Complete"
+          },
+          {
+            "type": "TextBody",
+            "text": "${data.message}"
+          }
+        ]
+      }
+    }
+  ]
+}
