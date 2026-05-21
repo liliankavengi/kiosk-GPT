@@ -6,11 +6,10 @@ Generates professional receipts for Lightning payment confirmations.
 import io
 from datetime import datetime
 
+from app.utils import logger
 from reportlab.lib.pagesizes import A6
 from reportlab.lib.units import mm
 from reportlab.pdfgen import canvas
-
-from app.utils import logger
 
 
 async def generate_receipt(

@@ -8,12 +8,11 @@ import json
 import os
 from pathlib import Path
 
-from groq import Groq
 from app.config import get_settings
 from app.models.transaction import AIParseResult
 from app.utils import logger
 from app.utils.constants import GROQ_MODEL
-
+from groq import Groq
 
 # Load the prompt template
 _PROMPT_PATH = Path(__file__).parent.parent.parent / "prompts" / "sale_parser.txt"

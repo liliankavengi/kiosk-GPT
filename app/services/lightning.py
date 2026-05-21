@@ -6,8 +6,8 @@ NOTE: This module requires the `ldk-node` Python package.
 It is stubbed out for Phase 1-4 and will be fully implemented in Phase 5.
 """
 
-from app.utils import logger
 from app.db import insert_row, update_row
+from app.utils import logger
 
 
 class LightningService:

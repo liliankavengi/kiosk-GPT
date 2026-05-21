@@ -4,6 +4,7 @@ Structured logging configuration for Kiosk-GPT.
 
 import logging
 import sys
+
 from app.config import get_settings
 
 

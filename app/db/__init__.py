@@ -2,10 +2,9 @@
 Supabase client initialization and helpers.
 """
 
-from supabase import create_client, Client
 from app.config import get_settings
 from app.utils import logger
-
+from supabase import Client, create_client
 
 _client: Client | None = None
 

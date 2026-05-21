@@ -3,6 +3,7 @@ Inventory item model.
 """
 
 from datetime import datetime
+
 from pydantic import BaseModel, Field
 
 

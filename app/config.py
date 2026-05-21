@@ -4,6 +4,7 @@ All secrets and config are loaded from environment variables / .env file.
 """
 
 from functools import lru_cache
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 

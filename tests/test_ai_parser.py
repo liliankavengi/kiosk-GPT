@@ -5,7 +5,6 @@ Tests for the AI parser service.
 import pytest
 from app.models.transaction import AIParseResult
 
-
 # ── Test Pydantic model validation ───────────────────────
 
 def test_parse_result_valid():

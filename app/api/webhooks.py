@@ -9,16 +9,15 @@ import hmac
 import json
 import uuid
 
-from fastapi import APIRouter, Query, Request, Response
-
 from app.config import get_settings
 from app.db import get_single_row
 from app.models.webhook import WhatsAppWebhookPayload
-from app.services import whatsapp, ai_parser, inventory
+from app.services import ai_parser, inventory, whatsapp
 from app.services.lightning import lightning_service
 from app.services.receipts import generate_receipt
 from app.utils import logger
-from app.utils.constants import BTN_REORDER_YES, BTN_REORDER_NO
+from app.utils.constants import BTN_REORDER_NO, BTN_REORDER_YES
+from fastapi import APIRouter, Query, Request, Response
 
 router = APIRouter(tags=["webhooks"])
 

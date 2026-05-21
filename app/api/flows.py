@@ -4,9 +4,10 @@ Handles registration and other Flow form submissions.
 """
 
 import json
-from fastapi import APIRouter, Request
-from app.db import insert_row, get_single_row
+
+from app.db import get_single_row, insert_row
 from app.utils import logger
+from fastapi import APIRouter, Request
 
 router = APIRouter(prefix="/flows", tags=["flows"])
 
